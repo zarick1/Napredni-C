@@ -1,0 +1,5 @@
+gcc -c calculateHistogram.c -o calculateHistogram.o
+gcc -c printHistogram.c -o printHistogram.o
+ar -rs libHistogram.a *.o
+gcc -o main main.c -L. -lHistogram -static
+./main
